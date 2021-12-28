@@ -1,0 +1,19 @@
+version : '3'
+services:
+      backend:
+          build: "Backend"
+          container_name: backend
+          ports:
+            -    "3000:3000"
+
+      frontend:
+          build: "Frontend"
+          container_name: frontend
+          ports:
+            -    "4200:4200"
+
+      mongodb:
+          build: "Mongodb"
+          container_name: mongodb
+          ports:
+            -    "27017:27017"
