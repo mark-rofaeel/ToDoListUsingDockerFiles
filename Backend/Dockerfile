@@ -1,8 +1,8 @@
 FROM node
-RUN mkdir -p /home/todo
-WORKDIR /home/todo
-COPY package*.json /home/todo
+RUN mkdir -p /home/backend
+WORKDIR /home/backend
+COPY package*.json /home/backend
 RUN npm install
 COPY . .
 EXPOSE 3000
-CMD ["node", "/home/todo/server.js"]
+CMD ["node", "/home/backend/server.js"]
