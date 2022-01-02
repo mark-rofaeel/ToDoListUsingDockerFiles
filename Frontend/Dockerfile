@@ -1,7 +1,8 @@
-FROM quay.io/bitnami/node
-WORKDIR /app
-COPY package.json package-lock.json ./
+FROM node AS build
+WORKDIR /home/todo
+COPY package*.json /home/todo
 RUN npm install
 COPY . .
+RUN npm install -g @angular/cli 
 EXPOSE 4200
-ENTRYPOINT [ "sudo npm start"]
+CMD ng serve --host 0.0.0.0
