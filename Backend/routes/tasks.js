@@ -2,7 +2,7 @@ const router=require('express').Router()
 const Todo_model=require('../models/todo')
 var mongoose = require('mongoose');
 require('dotenv');
-var db=mongoose.connect('mongodb://mongo:mongo@'+process.env.IP+':27017/?directConnection=true&serverSelectionTimeoutMS=2000',function(err,response){
+var db=mongoose.connect('mongodb://mongo:mongo@172.30.88.104:27017/?directConnection=true&serverSelectionTimeoutMS=2000',function(err,response){
   if(err) 
   console.log("Connection error in database, please try again");
   else
