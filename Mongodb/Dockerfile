@@ -1,5 +1,7 @@
 FROM mongo
 
-RUN mkdir -p /data/db
+VOLUME ["/data/db"]
 WORKDIR /data
+EXPOSE 27017
+CMD ["mongod"]
 EXPOSE 27017
