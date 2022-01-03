@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 const User = require('../models/User');
 //var app = express();
 require('dotenv');
-var db=mongoose.connect('mongodb://'+process.env.IP+':27017/?directConnection=true&serverSelectionTimeoutMS=2000',function(err,response){
+var db=mongoose.connect('mongodb://mongo:mongo@'+process.env.IP+':27017/mongodb?directConnection=true&serverSelectionTimeoutMS=2000',function(err,response){
   if(err) 
     console.log("Connection error in database, please try again");
   else
