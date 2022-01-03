@@ -4,4 +4,4 @@ COPY package.json package-lock.json ./
 RUN npm install
 COPY . .
 EXPOSE 4200
-ENTRYPOINT [ "sudo npm start"] 
+CMD ng serve --host 0.0.0.0
